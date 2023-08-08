@@ -1,7 +1,30 @@
 # GoF_SpringBoot_1.Singleton
 
+In this application we crate two classes, one for the main application execution and the other class for defining a singleton class.
 
+## SingletonApplication
+```java
+package com.example.singleton;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SingletonApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SingletonApplication.class, args);
+	
+		// Get the instance of the SingletonClass
+        SingletonClass singletonInstance = SingletonClass.getInstance();
+
+        // Now you can use the SingletonClass instance to perform actions
+        // For example, you can call a method on the SingletonClass
+        singletonInstance.someMethod();
+	}
+
+}
+```
 
 ## SingletonClass
 ```java
